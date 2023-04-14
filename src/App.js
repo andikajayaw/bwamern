@@ -1,11 +1,15 @@
 import "./assets/scss/style.scss"
-import Button from './components/global/Button/index'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LandingPage from "./pages/LandingPage"
 
 function App() {
   return (
     <div className="App">
-      BWA MERN
-      <Button className="btn" isPrimary>Hello</Button>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage pathName="/" />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
